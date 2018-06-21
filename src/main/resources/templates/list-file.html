@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>썸네일 경로 확인 - <span  th:text="${filePath}"></span></h1>
+
+<form id="form" action="/thumbAdd" method="post">
+	<input type="hidden" name="filePath" th:value="${filePath}" />
+	<input type="submit" value="썸네일 생성" />
+</form>
+
+<!-- 썸네일 리스트 -->
+<div th:each="list : ${list}" >
+	<div th:text="${list}"></div>
+</div>
+
+</body>
+</html>
