@@ -35,7 +35,7 @@ public class ThumbAdd {
 			 List<String> thumbList = getPath(br);
 			 redirectAttributes.addFlashAttribute("thumbList",thumbList);			 
 		} catch (Exception e) {
-			redirectAttributes.addFlashAttribute("list",e.getMessage());
+			redirectAttributes.addFlashAttribute("thumbList",e.getMessage());
 			
 		}
 		return "redirect:/thumb-success";
@@ -55,7 +55,7 @@ public class ThumbAdd {
 			cnt++;
 			//파일 유무 확인
 			if(fileCheck(new File(imagePatch))) {
-				//추출한 경로 썸네일 작업
+				//추출한 경로 썸네일 작7업
 				thumbAdd(imagePatch, imageThumbPatch);
 				list.add(cnt+"::"+imageThumbPatch+"::성공");
 			}else {
